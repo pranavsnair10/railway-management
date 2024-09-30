@@ -1,6 +1,6 @@
 import express from "express";
-import { employeeRouter } from "./employees.js";
+import { railwayRouter } from "./railwayRouter.js";
 
 export const apiRouter = express.Router();
 
-apiRouter.use("/employees", employeeRouter);
+apiRouter.use("/trains", railwayRouter);

@@ -4,6 +4,7 @@ import { apiRouter } from "./routes/api/api.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import { corsOptions } from "./config/cors.config.js";
 import morgan from "morgan";
+import renderBranding from "./utils/renderBranding.js";
 
 const app = express();
 
@@ -19,5 +20,5 @@ app.use("/api", apiRouter);
 app.use(errorHandler);
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
+  renderBranding();
 });
